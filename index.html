@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>开始</title>
 </head>
+<audio src="./MP31.mp3" id="bgaudio" ></audio>
+<script>
+    var bgaudiocount = 0;
+    function bgaudio(){
+        ++bgaudiocount;
+        if(bgaudiocount % 2 == 1){
+            document.getElementById("bgaudio").play();
+        }else{
+            document.getElementById("bgaudio").pause();
+        }
+    }
+</script>
 <style>
     .b{
         width: 200px;
@@ -39,6 +51,7 @@
 </style>
 <body background="./img1.jpg" style="background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
     <div class="aaa">
+        <img src="./img2.png" width="80px" height="80px" alt="" class="musicBtn" onclick="bgaudio()" >
     <div class="bbb">
        <p>H&nbsp;E&nbsp;L&nbsp;L&nbsp;O</p>
    </div>
